@@ -1,0 +1,41 @@
+{
+  "name": "java-script-fundamentals",
+  "version": "1.0.0",
+  "description": "Javascript Dojo from CI&T.",
+  "homepage": "https://github.com/ciandt-dev/JavaScript-fundamentals/",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "lint": "./node_modules/eslint/bin/eslint.js lib test || true",
+    "cover": "./node_modules/nyc/bin/nyc.js mocha || true",
+    "test": "./node_modules/mocha/bin/mocha test || true",
+    "solutions": "./node_modules/mocha/bin/mocha test --cheat || true",
+    "build": "npm run lint && npm run cover",
+    "watch": "./node_modules/nodemon/bin/nodemon.js -e js -w lib -w test --exec 'npm run build'"
+  },
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.1.1",
+    "eslint-config-defaults": "^9.0.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "nsp": "^2.6.2",
+    "nyc": "^10.1.2"
+  },
+  "eslintConfig": {
+    "extends": "defaults",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "https://github.com/ciandt-dev/JavaScript-fundamentals/",
+  "license": "MIT",
+  "author": "Douglas Meira Cotrim Pereira de Melo <douglaspm@ciandt.com>",
+  "dependencies": {}
+}

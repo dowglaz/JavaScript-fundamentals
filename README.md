@@ -73,27 +73,72 @@ Could be studied by day as individual, group and/or dojo.
 
 > DOJO - JS Fundamentals
 
-### Running your exercises ###
-
-`npm install -g gulp-cli`
-
-`npm install -g mocha`
+### Setup environment ###
+If you use npm (default):
 
 `npm install`
 
-`npm run {module}{exercise}`
-
-For instance:
-
-`npm run 1.1`
-
-If you prefer running yarn, you also can. After install [yarn](https://yarnpkg.com/lang/en/docs/install/), you can do:
+If you use yarn, you can use:
 
 `yarn install`
 
-`yarn global add gulp-cli`
+### Before coding ###
+In order to use this structure to test your solutions first you should fork this repository.
 
-`yarn global add mocha`
+When you fork this repository you'll be able commit and push your responses to github without worry about losing your code and also not mess up with the shared repository, which has the tests structure and all shared info.
 
-`yarn run 1.1`
+However, if you'd like to retrieve new updates from the mainstream repository, you'll have to bring the changes manually to your repository.
+
+You can do this adding the mainstream remote to your forked repository or you'll be able to merge via github interface if you have the PullRequests URL.
+
+### Running your exercises ###
+To run your solutions, you must run:
+
+`npm test`
+
+If you would like to test a specific exercise you can do:
+
+`mocha test/module{n}`
+
+For instance, if you want to see how's your solution for module4, you should do:
+
+`mocha test/module4`
+
+If you want to cheat and see the tests running green (filling it with the right solutions), you can run:
+
+`npm solutions`
+
+### Coverage ###
+
+Also, if you want to check tests coverage, you can run:
+
+`npm run cover`
+
+### Lint - WIP ###
+
+In order to see if your code is attending to coding standards, you can run:
+
+`npm run lint`
+
+### Watch ###
+
+If you want to run lint + tests + coverage you can do:
+
+`npm run watch`
+
+And this will listen for changes in your code (tests and solutions). As you change your code it'll run immediately and you'll see it on the console.
+
+
+Obs: all commands using `npm` can be run with `yarn`.
+
+### Seeing your responses - WIP ###
+If instead of running tests you want to see your solutions, you can do (on the root dir):
+
+`node .`
+
+
+### Cheating ###
+If you want to cheat and see the answers you can run (on the root dir)
+
+`node . --cheat`
 
